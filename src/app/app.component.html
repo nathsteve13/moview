@@ -1,3 +1,47 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>
+
+<ion-menu side="start" auto-hide="true" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-menu-button slot="start"></ion-menu-button>
+      <ion-title>Moview</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-list>
+      <!-- Jika pengguna belum login, tampilkan Login dan Register -->
+      <ion-menu-toggle *ngIf="!isLoggedIn">
+        <ion-item routerLink="/login">
+          <ion-icon name="home" slot="start"></ion-icon>
+          <ion-label>Login</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle *ngIf="!isLoggedIn">
+        <ion-item routerLink="/register">
+          <ion-icon name="list" slot="start"></ion-icon>
+          <ion-label>Register</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <!-- Jika pengguna sudah login, tampilkan Logout dan Username -->
+      <ion-menu-toggle *ngIf="isLoggedIn">
+        <ion-item (click)="logout()">
+          <ion-icon name="settings" slot="start"></ion-icon>
+          <ion-label>Logout</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <!-- Tampilkan foto profil dan nama pengguna -->
+      <ion-item *ngIf="isLoggedIn">
+        <ion-avatar slot="start">
+          <img [src]="profilePicture || 'assets/default-profile-picture.jpeg'" />
+        </ion-avatar>
+        <ion-label>{{ username }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
