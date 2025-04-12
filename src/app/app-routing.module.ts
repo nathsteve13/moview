@@ -10,7 +10,27 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'movie',
+    loadChildren: () => import('./movie/movie.module').then( m => m.MoviePageModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
+  },
+  {
+    path: 'detailmovie',
+    loadChildren: () => import('./detailmovie/detailmovie.module').then( m => m.DetailmoviePageModule)
+  },
+
 ];
 
 @NgModule({
