@@ -1,0 +1,75 @@
+.poster-container {
+  position: relative;
+}
+
+.poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.movie-detail-content {
+  padding: 16px;
+  color: white;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .meta {
+    color: #aaa;
+    font-size: 14px;
+  }
+
+  .rating {
+    margin: 8px 0;
+    color: #ffc107;
+  }
+
+  .section {
+    margin-top: 24px;
+  }
+
+  ion-label {
+    color: white;
+  }
+
+  .review-card {
+    background: #1f1f1f;
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #ccc;
+  }
+
+  .review-comment {
+    margin: 8px 0;
+    font-style: italic;
+  }
+
+  .review-rating {
+    color: #ffc107;
+  }
+}
+ion-list {
+  --background: transparent;
+  background-color: transparent !important;
+}
+
+ion-item {
+  --background: transparent;
+  background-color: transparent !important;
+  --color: white;
+
+  ion-label {
+    color: white !important;
+  }
+}
