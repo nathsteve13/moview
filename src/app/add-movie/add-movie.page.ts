@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-movie',
   templateUrl: './add-movie.page.html',
   styleUrls: ['./add-movie.page.scss'],
+  standalone: false,
 })
-export class AddMoviePage implements OnInit {
+export class AddMoviePage {
+  movie = {
+    title: '',
+    genre: '',
+    releaseDate: '',
+    poster: '',
+    director: '',
+    synopsis: '',
+  };
 
-  constructor() { }
+  constructor(private router: Router) {}
 
-  ngOnInit() {
+  saveMovie() {
+    console.log('Saved:', this.movie);
+    this.router.navigate(['/management-movie']);
   }
-
 }

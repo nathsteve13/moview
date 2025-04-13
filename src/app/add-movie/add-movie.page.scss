@@ -1,0 +1,30 @@
+ion-content {
+    --background: #121212;
+    color: white;
+  }
+  
+  ion-toolbar {
+    --background: #1e1e1e;
+    --color: white;
+  }
+  
+  ion-item {
+    --background: #1e1e1e;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    --color: white;
+  }
+  
+  ion-input, ion-textarea {
+    color: white;
+    font-size: 14px;
+  }
+  
+  ion-button {
+    margin-top: 24px;
+    --border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    height: 48px;
+  }
+  

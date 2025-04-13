@@ -31,7 +31,8 @@ const routes: Routes = [
   {
     path: 'detailmovie',
     loadChildren: () => import('./detailmovie/detailmovie.module').then( m => m.DetailmoviePageModule)
-  },  {
+  },
+  {
     path: 'management-movie',
     loadChildren: () => import('./management-movie/management-movie.module').then( m => m.ManagementMoviePageModule)
   },
@@ -40,10 +41,10 @@ const routes: Routes = [
     loadChildren: () => import('./add-movie/add-movie.module').then( m => m.AddMoviePageModule)
   },
   {
-    path: 'edit-movie',
+    path: 'edit-movie/:id',
     loadChildren: () => import('./edit-movie/edit-movie.module').then( m => m.EditMoviePageModule)
   },
-
+  
   
 
 

@@ -1,13 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>management-movie</ion-title>
+<ion-header translucent="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Manage Movies</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">management-movie</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content color="dark" class="ion-padding">
+  <ion-button expand="block" color="primary" routerLink="/add-movie">+ Add Movie</ion-button>
+
+  <div class="movie-grid">
+    <ion-card *ngFor="let movie of movies" class="movie-card">
+      <img [src]="movie.poster" />
+      <ion-card-header>
+        <ion-card-title>{{ movie.title }}</ion-card-title>
+        <ion-card-subtitle>{{ movie.genre }} | {{ movie.releaseDate }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="actions">
+          <ion-button fill="clear" color="warning" [routerLink]="['/edit-movie', movie.id]">
+            <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear" color="danger" (click)="deleteMovie(movie.id)">
+            <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
