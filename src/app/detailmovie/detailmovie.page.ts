@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-detailmovie',
   templateUrl: './detailmovie.page.html',
   styleUrls: ['./detailmovie.page.scss'],
+  standalone: false,
 })
 export class DetailmoviePage implements OnInit {
 

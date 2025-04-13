@@ -1,0 +1,47 @@
+.custom-menu {
+--background: #1b1d30;
+color: white;
+}
+
+.menu-content {
+--background: #1b1d30;
+color: white;
+}
+
+
+ion-list {
+--background: transparent !important;
+}
+
+ion-item {
+--background: transparent;
+--color: white;
+font-size: 16px;
+border-radius: 8px;
+margin: 6px 10px;
+
+ion-icon {
+color: #00fff5;
+}
+}
+
+ion-item:hover {
+--background: #2c2e44;
+}
+
+.user-info {
+text-align: center;
+margin: 24px 0;
+
+ion-avatar {
+width: 80px;
+height: 80px;
+margin: 0 auto 10px;
+}
+
+h3 {
+font-size: 16px;
+font-weight: 600;
+color: #00fff5;
+}
+}

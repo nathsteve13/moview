@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class AppComponent {
-  constructor() {}
+  isLoggedIn = true;
+  username = 'Nathan';
+
+  logout() {
+    this.isLoggedIn = false;
+  }
 }
+
