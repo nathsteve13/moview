@@ -37,7 +37,7 @@ export class ManagementMoviePage {
       releaseDate: '2010-07-16',
       rating: 4.8,
       director: 'Christopher Nolan',
-      poster: 'https://image.tmdb.org/t/p/w500/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg',
+      poster: 'https://play-lh.googleusercontent.com/buKf27Hxendp3tLNpNtP3E-amP0o4yYV-SGKyS2u-Y3GdGRTyfNCIT5WAVs2OudOz6so5K1jtYdAUKI9nw8',
       synopsis: 'A thief who steals corporate secrets through dream-sharing technology is given a chance to erase his past.',
       cast: [
         { name: 'Leonardo DiCaprio', role: 'Dom Cobb' },
@@ -81,7 +81,7 @@ export class ManagementMoviePage {
       releaseDate: '2009-12-18',
       rating: 4.7,
       director: 'James Cameron',
-      poster: 'https://image.tmdb.org/t/p/w500/kmcqlZGaSh20zpTbuoF0Cdn07dT.jpg',
+      poster: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTwJPOxfRiaHwXkICnf6LKMHIPWJPGLx8wht-wZH-qFs0OXXUCBvOeCQTs79z7Bx9odsdsB',
       synopsis: 'A paraplegic Marine is sent to the moon Pandora on a unique mission.',
       cast: [
       { name: 'Sam Worthington', role: 'Jake Sully' },
@@ -138,7 +138,7 @@ export class ManagementMoviePage {
       releaseDate: '1997-12-19',
       rating: 4.7,
       director: 'James Cameron',
-      poster: 'https://image.tmdb.org/t/p/w500/kHXEpyfl6zqn8a6YuozZUujufXf.jpg',
+      poster: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlcQXin_CNozAFkv_SSihe5eZ_lvDD5nBqCmQT3xPf6KLlqHloIo5cBRGqwuy8pjuIiZrqoA',
       synopsis: 'A love story unfolds aboard the ill-fated Titanic.',
       cast: [
       { name: 'Leonardo DiCaprio', role: 'Jack Dawson' },

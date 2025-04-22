@@ -122,3 +122,12 @@ ion-slide {
     object-fit: cover;
   }
 }
+
+
+@media (min-width: 768px) {
+
+  .movie-card {
+    width: 400px; 
+  }
+}
+

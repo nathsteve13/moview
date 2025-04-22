@@ -7,31 +7,45 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content color="dark" class="ion-padding">
+
+  <!-- Movie Title -->
   <ion-item>
     <ion-input placeholder="Title" [(ngModel)]="movie.title"></ion-input>
   </ion-item>
 
+  <!-- Movie Genre -->
   <ion-item>
     <ion-input placeholder="Genre" [(ngModel)]="movie.genre"></ion-input>
   </ion-item>
 
+  <!-- Release Date with Calendar -->
   <ion-item>
-    <ion-input type="date" [(ngModel)]="movie.releaseDate"></ion-input>
+    <ion-label position="floating">Release Date</ion-label>
+    <ion-datetime [(ngModel)]="movie.releaseDate" display-format="YYYY-MM-DD"></ion-datetime>
   </ion-item>
 
+  <!-- Poster URL with Image Preview -->
   <ion-item>
     <ion-input placeholder="Poster URL" [(ngModel)]="movie.poster"></ion-input>
   </ion-item>
 
+  <!-- Display Poster Image if URL is provided -->
+  <div *ngIf="movie.poster">
+    <ion-img [src]="movie.poster" alt="Movie Poster" class="poster-img"></ion-img>
+  </div>
+
+  <!-- Director -->
   <ion-item>
     <ion-input placeholder="Director" [(ngModel)]="movie.director"></ion-input>
   </ion-item>
 
+  <!-- Synopsis -->
   <ion-item>
     <ion-textarea placeholder="Synopsis" [(ngModel)]="movie.synopsis"></ion-textarea>
   </ion-item>
 
+  <!-- Save Button -->
   <ion-button expand="block" color="success" (click)="saveMovie()">Save Movie</ion-button>
+
 </ion-content>
