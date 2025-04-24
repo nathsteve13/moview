@@ -42,7 +42,7 @@ export class EditMoviePage implements OnInit {
       releaseDate: '2010-07-16',
       rating: 4.8,
       director: 'Christopher Nolan',
-      poster: 'https://play-lh.googleusercontent.com/buKf27Hxendp3tLNpNtP3E-amP0o4yYV-SGKyS2u-Y3GdGRTyfNCIT5WAVs2OudOz6so5K1jtYdAUKI9nw8',
+      poster: 'https://image.tmdb.org/t/p/w500/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg',
       synopsis: 'A thief who steals corporate secrets through dream-sharing technology is given a chance to erase his past.',
       cast: [
         { name: 'Leonardo DiCaprio', role: 'Dom Cobb' },
@@ -86,7 +86,7 @@ export class EditMoviePage implements OnInit {
       releaseDate: '2009-12-18',
       rating: 4.7,
       director: 'James Cameron',
-      poster: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTwJPOxfRiaHwXkICnf6LKMHIPWJPGLx8wht-wZH-qFs0OXXUCBvOeCQTs79z7Bx9odsdsB',
+      poster: 'https://image.tmdb.org/t/p/w500/kmcqlZGaSh20zpTbuoF0Cdn07dT.jpg',
       synopsis: 'A paraplegic Marine is sent to the moon Pandora on a unique mission.',
       cast: [
       { name: 'Sam Worthington', role: 'Jake Sully' },
@@ -143,7 +143,7 @@ export class EditMoviePage implements OnInit {
       releaseDate: '1997-12-19',
       rating: 4.7,
       director: 'James Cameron',
-      poster: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlcQXin_CNozAFkv_SSihe5eZ_lvDD5nBqCmQT3xPf6KLlqHloIo5cBRGqwuy8pjuIiZrqoA',
+      poster: 'https://image.tmdb.org/t/p/w500/kHXEpyfl6zqn8a6YuozZUujufXf.jpg',
       synopsis: 'A love story unfolds aboard the ill-fated Titanic.',
       cast: [
       { name: 'Leonardo DiCaprio', role: 'Jack Dawson' },
@@ -210,6 +210,63 @@ export class EditMoviePage implements OnInit {
       reviews: [
       { name: 'Emma', date: '2025-04-12', rating: 5, comment: 'A heartwarming and inspiring tale.' },
       { name: 'Noah', date: '2025-04-11', rating: 4.9, comment: 'Tom Hanks delivers a phenomenal performance.' },
+      ],
+    },
+    {
+      id: 11,
+      title: 'The Lion King',
+      genre: 'Animation',
+      releaseDate: '1994-06-24',
+      rating: 4.8,
+      director: 'Roger Allers, Rob Minkoff',
+      poster: 'https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg',
+      synopsis: 'A young lion prince flees his kingdom after the death of his father.',
+      cast: [
+        { name: 'Matthew Broderick', role: 'Simba' },
+        { name: 'James Earl Jones', role: 'Mufasa' },
+        { name: 'Jeremy Irons', role: 'Scar' },
+      ],
+      reviews: [
+        { name: 'Sophia', date: '2025-04-12', rating: 5, comment: 'A timeless classic with unforgettable music.' },
+        { name: 'Liam', date: '2025-04-11', rating: 4.8, comment: 'A beautiful story of courage and redemption.' },
+      ],
+    },
+    {
+      id: 12,
+      title: 'Avengers: Endgame',
+      genre: 'Action',
+      releaseDate: '2019-04-26',
+      rating: 4.9,
+      director: 'Anthony Russo, Joe Russo',
+      poster: 'https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg',
+      synopsis: 'The Avengers assemble once more to reverse Thanos’ actions and restore balance.',
+      cast: [
+        { name: 'Robert Downey Jr.', role: 'Tony Stark / Iron Man' },
+        { name: 'Chris Evans', role: 'Steve Rogers / Captain America' },
+        { name: 'Scarlett Johansson', role: 'Natasha Romanoff / Black Widow' },
+      ],
+      reviews: [
+        { name: 'Ethan', date: '2025-04-12', rating: 5, comment: 'An epic conclusion to the Marvel saga.' },
+        { name: 'Emma', date: '2025-04-11', rating: 4.9, comment: 'Emotional and action-packed.' },
+      ],
+    },
+    {
+      id: 13,
+      title: 'Coco',
+      genre: 'Animation',
+      releaseDate: '2017-11-22',
+      rating: 4.8,
+      director: 'Lee Unkrich, Adrian Molina',
+      poster: 'https://image.tmdb.org/t/p/w500/gGEsBPAijhVUFoiNpgZXqRVWJt2.jpg',
+      synopsis: 'A young boy embarks on a journey to the Land of the Dead to uncover his family’s history.',
+      cast: [
+        { name: 'Anthony Gonzalez', role: 'Miguel' },
+        { name: 'Gael García Bernal', role: 'Héctor' },
+        { name: 'Benjamin Bratt', role: 'Ernesto de la Cruz' },
+      ],
+      reviews: [
+        { name: 'Olivia', date: '2025-04-12', rating: 5, comment: 'Heartwarming and visually stunning.' },
+        { name: 'Noah', date: '2025-04-11', rating: 4.8, comment: 'A celebration of family and culture.' },
       ],
     },
   ];

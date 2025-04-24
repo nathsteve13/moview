@@ -17,8 +17,8 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col size="6" size-md="4" size-lg="3" class="movie-col" *ngFor="let movie of latestMovies">
-        <ion-card routerLink="/movie-detail/{{ movie.id }}" class="movie-card">
+      <ion-col size="6" size-md="4" size-lg="3" class="movie-col" *ngFor="let movie of getLatestMovies()"> 
+        <ion-card routerLink="/movie/{{ movie.id }}" class="movie-card">
           <ion-img [src]="movie.poster"></ion-img>
           <ion-card-content>
             <h3 class="movie-title">{{ movie.title }}</h3>
