@@ -8,44 +8,61 @@
 </ion-header>
 
 <ion-content color="dark" class="ion-padding">
-
-  <!-- Movie Title -->
   <ion-item>
     <ion-input placeholder="Title" [(ngModel)]="movie.title"></ion-input>
   </ion-item>
 
-  <!-- Movie Genre -->
   <ion-item>
     <ion-input placeholder="Genre" [(ngModel)]="movie.genre"></ion-input>
   </ion-item>
 
-  <!-- Release Date with Calendar -->
   <ion-item>
     <ion-label position="floating">Release Date</ion-label>
     <ion-datetime [(ngModel)]="movie.releaseDate" display-format="YYYY-MM-DD"></ion-datetime>
   </ion-item>
 
-  <!-- Poster URL with Image Preview -->
   <ion-item>
     <ion-input placeholder="Poster URL" [(ngModel)]="movie.poster"></ion-input>
   </ion-item>
 
-  <!-- Display Poster Image if URL is provided -->
   <div *ngIf="movie.poster">
     <ion-img [src]="movie.poster" alt="Movie Poster" class="poster-img"></ion-img>
   </div>
 
-  <!-- Director -->
   <ion-item>
     <ion-input placeholder="Director" [(ngModel)]="movie.director"></ion-input>
   </ion-item>
 
-  <!-- Synopsis -->
   <ion-item>
     <ion-textarea placeholder="Synopsis" [(ngModel)]="movie.synopsis"></ion-textarea>
   </ion-item>
 
+  <!-- Rating Input -->
+  <ion-item>
+    <ion-label>Rating</ion-label>
+    <ion-range min="1" max="5" step="0.1" snaps="true" [(ngModel)]="movie.rating">
+      <ion-icon slot="start" name="star-outline"></ion-icon>
+      <ion-icon slot="end" name="star"></ion-icon>
+    </ion-range>
+  </ion-item>
+
+  <!-- Casts Input -->
+  <div *ngFor="let cast of casts; let i = index">
+    <ion-item>
+      <ion-input placeholder="Cast Name" [(ngModel)]="cast.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Role" [(ngModel)]="cast.role"></ion-input>
+    </ion-item>
+    <ion-button color="danger" size="small" fill="clear" (click)="removeCastField(i)" *ngIf="casts.length > 1">
+      Remove
+    </ion-button>
+  </div>
+
+  <ion-button expand="block" fill="outline" color="medium" (click)="addCastField()">
+    + Add Another Cast
+  </ion-button>
+
   <!-- Save Button -->
   <ion-button expand="block" color="success" (click)="saveMovie()">Save Movie</ion-button>
-
 </ion-content>
