@@ -7,24 +7,37 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content class="auth-content" fullscreen>
   <div class="auth-wrapper">
-
     <h2 class="auth-title">Login</h2>
     <p class="auth-subtitle">Please sign in to continue.</p>
 
+    <!-- Input Email -->
     <ion-item lines="none" class="auth-input">
       <ion-icon slot="start" name="mail-outline"></ion-icon>
-      <ion-input type="email" placeholder="Email"></ion-input>
+      <ion-input
+        type="email"
+        placeholder="Email"
+        [(ngModel)]="email"
+        required
+      ></ion-input>
     </ion-item>
 
+    <!-- Input Password -->
     <ion-item lines="none" class="auth-input">
       <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
-      <ion-input type="password" placeholder="Password"></ion-input>
+      <ion-input
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="password"
+        required
+      ></ion-input>
     </ion-item>
 
-    <ion-button expand="block" class="auth-button">LOGIN</ion-button>
+    <!-- Tombol Login -->
+    <ion-button expand="block" class="auth-button" (click)="login()">
+      LOGIN
+    </ion-button>
 
     <a class="auth-link" routerLink="/forgot-password">Forgot Password?</a>
 

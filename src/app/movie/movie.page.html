@@ -14,7 +14,7 @@
 
   <div class="movie-detail-content">
     <h2>{{ movie?.title }}</h2>
-    <p class="meta">{{ movie?.genre }} | {{ movie?.releaseDate }}</p>
+    <p class="meta">{{ movie?.genre }} | {{ movie?.release_date }}</p>
     <div class="rating">
       <ion-icon name="star" color="warning"></ion-icon>
       {{ movie?.rating }} / 5
@@ -28,7 +28,7 @@
     <div class="section">
       <h3>Cast</h3>
       <ion-list lines="none">
-        <ion-item *ngFor="let actor of movie?.cast">
+        <ion-item *ngFor="let actor of casts">
           <ion-label>
             <strong>{{ actor.name }}</strong><br />
             <small>{{ actor.role }}</small>
@@ -44,7 +44,7 @@
 
     <div class="section">
       <h3>User Reviews</h3>
-      <ion-card *ngFor="let review of movie?.reviews" class="review-card">
+      <ion-card *ngFor="let review of reviews" class="review-card">
         <ion-card-content>
           <div class="review-header">
             <strong>{{ review.name }}</strong>
@@ -61,15 +61,28 @@
 
     <div class="section">
       <h3>Add Your Review</h3>
-      <ion-textarea placeholder="Write your review..." [(ngModel)]="userReview"></ion-textarea>
+      <ion-textarea
+        placeholder="Write your review..."
+        [(ngModel)]="userReview"
+      ></ion-textarea>
+
       <ion-item>
         <ion-label>Rating</ion-label>
-        <ion-range min="1" max="5" step="1" snaps="true" [(ngModel)]="userRating">
+        <ion-range
+          min="1"
+          max="5"
+          step="1"
+          snaps="true"
+          [(ngModel)]="userRating"
+        >
           <ion-icon slot="start" name="star-outline"></ion-icon>
           <ion-icon slot="end" name="star"></ion-icon>
         </ion-range>
       </ion-item>
-      <ion-button expand="block" color="primary">Submit Review</ion-button>
+
+      <ion-button expand="block" color="primary" (click)="submitReview()">
+        Submit Review
+      </ion-button>
     </div>
   </div>
 </ion-content>

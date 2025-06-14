@@ -10,7 +10,7 @@
     <ion-content class="menu-content" color="dark">
       <div class="user-info" *ngIf="isLoggedIn">
         <ion-avatar>
-          <img src="assets/default-profile.jpeg" alt="User Profile" />
+          <img [src]="'assets/default-profile.jpeg'" alt="User Profile" />
         </ion-avatar>
         <h3>{{ username }}</h3>
       </div>
@@ -24,16 +24,16 @@
         </ion-menu-toggle>
 
         <ion-menu-toggle auto-hide="false">
-          <ion-item routerLink="/management-movie" routerDirection="root">
-            <ion-icon slot="start" name="settings-outline"></ion-icon>
-            <ion-label>Management</ion-label>
-          </ion-item>
-        </ion-menu-toggle>
-
-        <ion-menu-toggle auto-hide="false">
           <ion-item routerLink="/search">
             <ion-icon slot="start" name="search-outline"></ion-icon>
             <ion-label>Search</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle auto-hide="false" *ngIf="isLoggedIn">
+          <ion-item routerLink="/management-movie">
+            <ion-icon slot="start" name="settings-outline"></ion-icon>
+            <ion-label>Management</ion-label>
           </ion-item>
         </ion-menu-toggle>
 
