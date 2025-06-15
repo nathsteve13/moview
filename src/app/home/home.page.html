@@ -8,12 +8,9 @@
 </ion-header>
 
 <ion-content color="dark" class="ion-padding">
-
   <h2 class="section-title">🎬 10 Movie Terbaru</h2>
-
   <ion-spinner *ngIf="isLoading" name="dots" color="light"></ion-spinner>
   <p *ngIf="errorMsg">{{ errorMsg }}</p>
-
   <ion-grid *ngIf="!isLoading && !errorMsg">
     <ion-row>
       <ion-col
@@ -21,8 +18,7 @@
         size-md="4"
         size-lg="3"
         class="movie-col"
-        *ngFor="let movie of latestMovies"
-      >
+        *ngFor="let movie of latestMovies">
         <ion-card routerLink="/movie/{{ movie.id }}" class="movie-card">
           <ion-img [src]="movie.poster"></ion-img>
           <ion-card-content>
